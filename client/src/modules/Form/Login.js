@@ -9,7 +9,7 @@ const Login = ({
           label="Email / Phone Number"
           name="email"
           type="email"
-          className=""
+          className="w-[400px]"
           isRequired={true}
           placeholder="Enter your Email / Phone number"
       />
@@ -17,7 +17,7 @@ const Login = ({
           label="Password"
           name="pwd"
           type="password"
-          className=""
+          className="w-[400px]"
           isRequired={true}
           placeholder="Enter your password"
       />

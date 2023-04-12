@@ -25,7 +25,9 @@ const Form = () => {
 
         </div>
         <div className="h-[700px] border-2 border-slate-700 flex flex-col items-center justify-center">
-            { showComponent ? <SignUp /> : <Login /> }
+            <div className='flex flex-col justify-center items-center'>
+            { showComponent ? <SignUp className='flex flex-col justify-center items-center'/> : <Login /> }
+            </div>
             <div className="text-sm pt-2.5 ">
                 <h2>
                 { showComponent ? "Already a member? " : "Not a member? " }

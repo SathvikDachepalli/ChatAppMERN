@@ -18,6 +18,7 @@ module.exports = {
         white: "#fff",
         myBG:"#dbcce9",
         transparent: "transparent",
+        receive:"#bdd5d6",
       },
     },
   },

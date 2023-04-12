@@ -2,12 +2,12 @@ import Input from '../../components/FormInput/Input'
 import Button from '../../components/FormInput/Buttons/button'
 const SignUp = () => {
   return (
-    <>
+    <div  >
     <Input 
         label="First Name"
         name="Fname"
         type="text"
-        className=""
+        className="w-[400px]"
         isRequired={true}
         placeholder="Enter your first name"
     />
@@ -15,7 +15,7 @@ const SignUp = () => {
         label="Last Name"
         name="Lname"
         type="text"
-        className=""
+        className="w-[400px]"
         isRequired={true}
         placeholder="Enter your Last name"
     />
@@ -23,7 +23,7 @@ const SignUp = () => {
         label="Phone Number"
         name="Phone"
         type="number"
-        className=""
+        className="w-[400px]"
         isRequired={true}
         placeholder="Phone number"
     />
@@ -31,7 +31,7 @@ const SignUp = () => {
         label="Email"
         name="email"
         type="email"
-        className=""
+        className="w-[400px]"
         isRequired={true}
         placeholder="Enter your email"
     />
@@ -39,13 +39,13 @@ const SignUp = () => {
         label="Password"
         name="pwd"
         type="password"
-        className=""
+        className="w-[400px]"
         isRequired={true}
         placeholder="Enter your password"
     />
     <Button value='Sign Up'/>
 
-  </>
+  </div >
   
   )
 }
