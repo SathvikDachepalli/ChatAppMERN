@@ -130,18 +130,18 @@ const sendMessage = async(e)=>{
                 </div>
             </div>
             <hr className="border"/>
-            <div className='mt-5 mx-10'>
+            <div className='mt-5 mx-3'>
               <div>Messages</div>
               <div>
                 {
                   conversations.length > 0 ?
                   conversations.map((conversation)=>{
                     return(
-                      <div className='flex items-center mt-5  bg-slate-400 p-2 rounded-full' id={conversation.conversationId} onClick={()=>fetchMessages(conversation.conversationId,conversation.user)}>
+                      <div className='flex items-center mt-5  bg-slate-400 p-2 rounded-full truncate' id={conversation.conversationId} onClick={()=>fetchMessages(conversation.conversationId,conversation.user)}>
                         <div className='border-2 border-gray-800 rounded-full p-1'>
                           <User size={40} className='rounded-full'></User>
                         </div>
-                        <div className='ml-5'>
+                        <div className='ml-2'>
                           <h3 className='text-lg'>{conversation.user.FullName}</h3>
                           <p className='text-sm'> {conversation.user.email} </p>
                         </div>
@@ -164,8 +164,8 @@ const sendMessage = async(e)=>{
               <div className='w-10 ml-10'> <PhonePlus size={50}/></div>
           </div>
 
-           <div className='h-[75%] border w-full overflow-y-auto overflow-x-hidden'>
-              <div className='h-auto px-10 py-14'> 
+           <div className='h-[75%] border w-full overflow-y-auto overflow-x-hidden '>
+              <div className='h-auto px-10 py-14 '> 
                 
                 {
                   messages.messages.length > 0 ?
@@ -214,7 +214,7 @@ const sendMessage = async(e)=>{
                   people.map((person)=>{
                     // console.log(person)
                     return(
-                      <div className='flex items-center mt-5 mr-2 ml-2 bg-slate-400 p-2 rounded-full'  onClick={()=>fetchMessages('new',person)}>
+                      <div className='flex items-center mt-5 mr-2 ml-2 truncate bg-slate-400 p-2 rounded-full'  onClick={()=>fetchMessages('new',person)}>
                         <div className='border-2 border-gray-800 rounded-full p-1'>
                           <User size={40} className='rounded-full'></User>
                         </div>
