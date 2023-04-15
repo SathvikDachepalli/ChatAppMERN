@@ -16,7 +16,7 @@ module.exports = {
         light: "#f8f9fa",
         dark: "#343a40",
         white: "#fff",
-        myBG:"#dbcce9",
+        myBG:"#d6e5e0",
         transparent: "transparent",
         receive:"#bdd5d6",
       },

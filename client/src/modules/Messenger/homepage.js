@@ -137,7 +137,7 @@ const sendMessage = async(e)=>{
                   conversations.length > 0 ?
                   conversations.map((conversation)=>{
                     return(
-                      <div className='flex items-center mt-5 bg-slate-400 p-2 rounded-full' id={conversation.conversationId} onClick={()=>fetchMessages(conversation.conversationId,conversation.user)}>
+                      <div className='flex items-center mt-5  bg-slate-400 p-2 rounded-full' id={conversation.conversationId} onClick={()=>fetchMessages(conversation.conversationId,conversation.user)}>
                         <div className='border-2 border-gray-800 rounded-full p-1'>
                           <User size={40} className='rounded-full'></User>
                         </div>
@@ -214,7 +214,7 @@ const sendMessage = async(e)=>{
                   people.map((person)=>{
                     // console.log(person)
                     return(
-                      <div className='flex items-center mt-5 bg-slate-400 p-2 rounded-full'  onClick={()=>fetchMessages('new',person)}>
+                      <div className='flex items-center mt-5 mr-2 ml-2 bg-slate-400 p-2 rounded-full'  onClick={()=>fetchMessages('new',person)}>
                         <div className='border-2 border-gray-800 rounded-full p-1'>
                           <User size={40} className='rounded-full'></User>
                         </div>
