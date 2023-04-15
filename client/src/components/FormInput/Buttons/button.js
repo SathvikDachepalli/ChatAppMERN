@@ -36,9 +36,6 @@ const Button = ({Mode}) => {
     const Fname = document.getElementById("Fname").value;
     const Lname = document.getElementById("Lname").value;
     const Phone = document.getElementById("Phone").value;
-    //Extact data from a uploaded image
-    const image = document.getElementById("image").files[0];
-    console.log(image)
     if(Fname==="" || Lname ==="" || Phone==="" || email===""|| pwd===""){
       alert("Insert all values");
     } else {
@@ -48,7 +45,6 @@ const Button = ({Mode}) => {
          phone:Phone,
          email:email,
          password:pwd,
-        image:image
       })
     }
   } else {
