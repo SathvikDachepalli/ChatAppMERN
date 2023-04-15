@@ -43,7 +43,8 @@ const SignUp = () => {
         isRequired={true}
         placeholder="Enter your password"
     />
-    <Button value='Sign Up'/>
+    <input type = "file" id="image" name='image'/>
+    <Button  Mode='Sign Up'/>
 
   </div >
   

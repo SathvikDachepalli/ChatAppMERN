@@ -1,7 +1,6 @@
 import Input from '../../components/FormInput/Input'
 import Button from '../../components/FormInput/Buttons/button'
 const Login = ({
-  value= 'Login',
 }) => {
   return (
     <> 
@@ -21,7 +20,7 @@ const Login = ({
           isRequired={true}
           placeholder="Enter your password"
       />
-      <Button value='Login'/> 
+      <Button Mode='Login'/> 
     </>
   )
 }

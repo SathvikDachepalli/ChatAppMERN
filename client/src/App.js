@@ -3,11 +3,10 @@ import Form from './modules/Form';
 import Homepage from './modules/Messenger/homepage';
 import React, { useState } from "react";
 import { Routes, Route,Navigate } from "react-router-dom";
-
-const ProtectedRoutes =({children})=>{
-  const isLoggedIn= localStorage.getItem("user:token")!==null;
-  console.log("isloggedin:>> ",isLoggedIn)
-  if(!isLoggedIn){
+import Logout from './modules/Logout/logout';
+const ProtectedRoutes =({children,auth=false})=>{
+  const isLoggedIn= localStorage.getItem("user:token")!==null ;
+  if(!isLoggedIn && auth){
       return <Navigate to="/form" />
     }else if(isLoggedIn &&['/form'].includes(window.location.pathname)){
       return <Navigate to="/" />
@@ -20,13 +19,23 @@ function App() {
     <div className="bg-myBG h-screen flex justify-center items-center">
       <Routes>
         <Route path="/" element={
-          <ProtectedRoutes>
+          <ProtectedRoutes auth="{true}">
             <Homepage />
           </ProtectedRoutes>
         } />
         <Route path="/form" element={
-            <Form />
+            <ProtectedRoutes>
+              <Form />
+            </ProtectedRoutes>
         } />
+        <Route path='/logout' element={
+          <ProtectedRoutes auth="{true}">
+            <Logout />
+          </ProtectedRoutes>
+
+        } />
+          
+
       </Routes>
     </div>
   );

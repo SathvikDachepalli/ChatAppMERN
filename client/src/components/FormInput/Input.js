@@ -14,7 +14,7 @@ const Input = ({
         <div className="text-left">
         <label className="text-xl text-dark font-bold " htmlFor={name}>{label}</label>
         <input
-            className={`w-[400px] h-[45px] rounded-lg border-2 border-dark focus:outline-none focus:border-primary text-lg px-2.5 bg-gray-300 ${InputClassName}`}
+            className={`w-[400px] h-[45px] rounded-lg border-2 border-dark focus:outline-none focus:border-primary text-lg px-2.5 bg-gray-300 ${InputClassName} indent-4`}
             type={type}
             name={name}
             id={name}
