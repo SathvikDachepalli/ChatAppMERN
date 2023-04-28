@@ -191,7 +191,7 @@ const sendMessage = async(e)=>{
           <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
     <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20"></svg>
   </div>
-  <input type="text" id="msg" class="ml-6 mt-2 h-14 bg-gray-300 border border-black text-black text-lg rounded-full block w-full pl-10 p-2.5 dark:placeholder-gray-400 " placeholder="Type here" onChange={(e)=>setSendMsg(e.target.value)} onKeyDown={(e)=>{checkEnter(e)}} autoComplete='false'/>
+  <input type="text" id="msg" class="ml-6 mt-2 h-14 bg-gray-300 border border-black text-black text-lg rounded-full block w-full pl-10 p-2.5 dark:placeholder-gray-400 " placeholder="Type here" onChange={(e)=>setSendMsg(e.target.value)} onKeyDown={(e)=>{checkEnter(e)}} autoComplete='false' />
               <div className={`bg-zinc-400 ml-2 mt-3 rounded-full w-14 h-12 flex flex-col justify-center items-center shadow-inner ${!sendMsg && 'pointer-events-none'}`} onClick={()=>{}} > <Send size={38} /> </div>
               <div className={`bg-zinc-400 ml-2 mt-3 rounded-full w-14 h-12 flex flex-col justify-center items-center shadow-inner ${!sendMsg && 'pointer-events-none'}`} onClick={()=>{}}> <CirclePlus size={40} /> </div>
               <div class="relative mb-6">

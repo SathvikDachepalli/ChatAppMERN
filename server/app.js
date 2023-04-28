@@ -2,7 +2,7 @@ const express = require('express');
 const bcryptjs=require('bcryptjs'); 
 const jwt=require('jsonwebtoken');
 const cors = require('cors');
-const io=require('socket.io')(8080,{
+const io=require('socket.io')({
     cors:{
         origin:"*",
     }
@@ -182,7 +182,6 @@ app.post('/api/message',async(req,res)=>{
                 receiverId: receiverId,
             });
             console.log(newMessage)
-            // await newMessage.save();
             return res.status(201).json({message: "Message sent successfully",message: newMessage});
         }
         const newMessage = new Message({
